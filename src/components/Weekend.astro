@@ -1,0 +1,139 @@
+<div class="week">
+  <div class="th tr">
+    <div></div>
+    <div>Суббота</div>
+    <div>Воскресенье</div>
+  </div>
+  <div class="tr">
+    <div class="time">
+      <div class="time-item">00:00</div>
+      <div class="time-item">01:00</div>
+      <div class="time-item">02:00</div>
+      <div class="time-item">03:00</div>
+      <div class="time-item">04:00</div>
+      <div class="time-item">05:00</div>
+      <div class="time-item">06:00</div>
+      <div class="time-item">07:00</div>
+      <div class="time-item">08:00</div>
+      <div class="time-item">09:00</div>
+      <div class="time-item">10:00</div>
+      <div class="time-item">11:00</div>
+      <div class="time-item">12:00</div>
+      <div class="time-item">13:00</div>
+      <div class="time-item">14:00</div>
+      <div class="time-item">15:00</div>
+      <div class="time-item">16:00</div>
+      <div class="time-item">17:00</div>
+      <div class="time-item">18:00</div>
+      <div class="time-item">19:00</div>
+      <div class="time-item">20:00</div>
+      <div class="time-item">21:00</div>
+      <div class="time-item">22:00</div>
+      <div class="time-item">23:00</div>
+    </div>
+    <div class="wd Saturday">
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item">
+        <div class="cal-item" style="width: 100%;">
+            <div class="title">Вечериночка</div>
+            <div class="time">13:00-16:00</div>
+          </div>
+      </div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+    </div>
+    <div class="wd Sunday">
+      <div class="time-item"></div> 
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item">
+        <div class="cal-item" style="width: 100%;">
+          <div class="title">Вечериночка</div>
+          <div class="time">06:00-09:00</div>
+        </div>
+      </div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+      <div class="time-item"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .week {
+    grid-area: week;
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 0.5rem;
+  }
+
+  .time-item {
+    border-top: 1px solid #ddd;
+    height: 50px;
+    box-shadow: inset -1px 0px 0px #ddd;
+    position: relative;
+  }
+
+  .tr {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+  }
+
+  .wd {
+    box-shadow: inset 0px 0px 0px #ddd;
+  }
+
+  .cal-item {
+    background: #65b1f4;
+    box-shadow: inset 0px 0px 1px 0px white;
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .cal-item {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 0.75rem;
+    height: 150px;
+  }
+</style>

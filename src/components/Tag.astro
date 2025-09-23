@@ -1,0 +1,18 @@
+---
+const { tag } = Astro.props;
+---
+
+<div class="tag" style="background-color: hls(200,200,200);">
+    {tag}
+</div>
+
+<style>
+    .tag {
+        margin-left: 5px;
+        display: inline-block;
+        border: 1px solid #000;
+        font-size: 0.75rem;
+        border-radius: 8px;
+        padding: 4px 8px;
+    }
+</style>

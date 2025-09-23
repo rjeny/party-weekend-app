@@ -1,0 +1,21 @@
+{
+  "name": "todoextended",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "stage:list": "astro db execute ./db/seed1.ts",
+    "stage:planner": "astro db execute ./db/seed2.ts",
+    "stage:movement": "astro db execute ./db/seed3.ts",
+    "stage:planner2": "astro db execute ./db/seed4.ts"
+  },
+  "dependencies": {
+    "@astrojs/db": "^0.17.1",
+    "astro": "^5.13.5",
+    "date-fns": "^4.1.0",
+    "modern-normalize": "^3.0.1"
+  }
+}
