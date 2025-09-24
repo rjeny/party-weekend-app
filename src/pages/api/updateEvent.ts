@@ -1,10 +1,11 @@
 import type { APIRoute } from "astro";
+import type { Body, Result } from '../../types/api/UpdateEvent';
 
 import { db, eq, Events, isDbError } from "astro:db";
 
 export const POST: APIRoute = async (ctx) => {
   try {
-    const body = await ctx.request.json();
+    const body = await ctx.request.json() as Body
 
     if (!body.id) {
       return new Response(
@@ -20,7 +21,10 @@ export const POST: APIRoute = async (ctx) => {
       );
     }
 
-    await db.update(Events).set(body).where(eq(Events.id, body.id));
+    await db.update(Events).set({
+      startAt: new Date(body.startAt),
+      endAt: new Date(body.endAt),
+    }).where(eq(Events.id, body.id));
 
     return new Response(
       JSON.stringify({

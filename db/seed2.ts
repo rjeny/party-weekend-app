@@ -9,7 +9,7 @@ export default async function seed() {
 	const border1 = getEvent(wednesday, 0, 0, 60);
 
 	await db.insert(Events).values([
-		{ title: 'border 1',  startAt: add(border1.startAt, { hours: -4}), endAt: border1.endAt},
+		{ title: 'border 1',  startAt: add(border1.startAt, { hours: -4}), endAt: border1.endAt, tags: border1.tags},
 		{ title: 'event 1', ...getEvent(wednesday, 9, 0, 60) },
 		{ title: 'event 2', ...getEvent(wednesday, 10, 0, 60) },
 		{ title: 'event 3', ...getEvent(wednesday, 12, 0, 60) },

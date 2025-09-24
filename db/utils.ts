@@ -10,13 +10,14 @@ function random(max: number) {
     return Math.round(Math.random()*max);
 }
 
-export function getEvent(day: Date, startH: number, startM: number, durM: number): {startAt: Date, endAt: Date} {
+export function getEvent(day: Date, startH: number, startM: number, durM: number): {startAt: Date, endAt: Date, tags: string} {
 	const startAt = startOfMinute(set(day, {
 		hours: startH,
 		minutes: startM,
 	}));
 
 	return {
+		tags: getRandomTags(),
 		startAt,
 		endAt: add(startAt, { minutes: durM})
 	}
@@ -32,4 +33,15 @@ export function randomMinute() {
 
 export function randomOnDay(day: Date) {
     return getEvent(day, randomHour(), randomMinute(), randomHour() * 60 + randomMinute())
+}
+
+const tags = ['work', 'play', 'study', 'exercise', 'social', 'education'];
+
+function getRandomTag() {
+	return tags[random(tags.length)];
+}
+
+
+export function getRandomTags() {
+	return Array.from({length: random(3)}, () => getRandomTag()).join(',');
 }

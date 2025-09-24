@@ -1,5 +1,5 @@
 import { db, Events } from 'astro:db';
-import { yesterday, getEvent, tomorrow, today, randomOnDay } from './utils';
+import { yesterday, getEvent, tomorrow, today, randomOnDay, getRandomTags } from './utils';
 
 // https://astro.build/db/seed
 export default async function seed() {
@@ -15,6 +15,6 @@ export default async function seed() {
 		{ title: 'Today 3', ...randomOnDay(today) },
 		{ title: 'Today 4', ...randomOnDay(today) },
 		{ title: 'Today 5', ...randomOnDay(today) },
-		{ title: 'Throw that day', startAt: yesterday, endAt: tomorrow },
+		{ title: 'Throw that day', startAt: yesterday, endAt: tomorrow, tags: getRandomTags()},
 	])
 }
