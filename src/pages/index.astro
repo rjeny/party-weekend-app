@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Readme from "../../README.md";
+import { Image } from 'astro:assets';
+import React from '../assets/react.svg';
+import Vue from '../assets/vue.svg';
+import Svelte from '../assets/svelte.svg';
+import AstroImg from '../assets/astro.svg';
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container">
+    <div class="block frameworks">
+      <h3>Выбери фреймворк</h3>
+      <a href="/react"><Image src={React} alt="" height="16"/> React</a>
+      <a href="/vue"><Image src={Vue} alt="" height="16"/>Vue</a>
+      <a href="/svelte"><Image src={Svelte} alt="" height="16"/>Svelte</a>
+      <a href="/astro"><Image src={AstroImg} alt="" height="16"/>Astro</a>
+    </div>
+
+    <div class="block example">
+      <a href="/example">Примерная верстка для задачи</a>
+    </div>
+
+    <div class="block api">
+      <Readme />
+    </div>
+  </div>
 </Layout>
+
+<style>
+	.container {
+		padding: 2rem;
+	}
+
+	.block {
+		padding: 2rem;
+		background-color: #fafafa;
+		border-radius: 1rem;
+	}
+
+	.block + .block {
+		margin-top: 1rem;
+	}
+
+	.frameworks a {
+		display: inline-flex;
+		align-items: center;
+		padding: 1rem 0.5rem;
+		border-radius: 0.5rem;
+		background: #eaeaea;
+		color: rgb(2, 77, 170);
+		text-decoration: none;
+	}
+
+	.frameworks a + a {
+		margin-left: 0.5rem;
+	}
+</style>

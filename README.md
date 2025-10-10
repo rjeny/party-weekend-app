@@ -1,19 +1,8 @@
-## Подключение своего фреймворка (react/vue)
-
-[https://docs.astro.build/en/guides/integrations-guide/react/](https://docs.astro.build/en/guides/integrations-guide/react/)
-
-```html
-<SomeReactComponent client:only="react" />
-<SomePreactComponent client:only="preact" />
-<SomeSvelteComponent client:only="svelte" />
-<SomeVueComponent client:only="vue" />
-<SomeSolidComponent client:only="solid-js" />
-```
-
 ## Api
 
 GET /api/getEvents
 
+types: `types/api/GetEvents.ts`
 ```ts
 type Result = {
   events: {
@@ -28,6 +17,7 @@ type Result = {
 
 POST /api/updateEvent
 
+types: `types/api/UpdateEvent.ts`
 ```ts
 export type Body = {
   id: number;

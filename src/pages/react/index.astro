@@ -1,0 +1,8 @@
+---
+import WelcomeReact from '../../components/react/Welcome.tsx';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+	<WelcomeReact client:only="react" />
+</Layout>

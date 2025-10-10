@@ -43,5 +43,5 @@ function getRandomTag() {
 
 
 export function getRandomTags() {
-	return Array.from({length: random(3)}, () => getRandomTag()).join(',');
+	return [...new Set(Array.from({length: random(3)}, () => getRandomTag()))].join(',');
 }
