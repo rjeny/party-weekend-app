@@ -1,9 +1,9 @@
-import { startOfMinute, set, add, nextWednesday, nextSunday } from "date-fns";
+import { startOfMinute, set, add, nextSunday, nextSaturday } from "date-fns";
 
 export const today = startOfMinute(new Date());
 export const yesterday = add(today, { days: -1 });
 export const tomorrow = add(today, { days: 1 });
-export const wednesday = startOfMinute(nextWednesday(new Date()));
+export const saturday = startOfMinute(nextSaturday(new Date()));
 export const sunday = startOfMinute(nextSunday(new Date()));
 
 function random(max: number) {
