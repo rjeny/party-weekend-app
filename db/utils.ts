@@ -38,10 +38,10 @@ export function randomOnDay(day: Date) {
 const tags = ['work', 'play', 'study', 'exercise', 'social', 'education'];
 
 function getRandomTag() {
-	return tags[random(tags.length)];
+	return tags[random(tags.length - 1)];
 }
 
 
 export function getRandomTags() {
-	return [...new Set(Array.from({length: random(3)}, () => getRandomTag()))].join(',');
+	return [...new Set(Array.from({length: random(2) + 1}, () => getRandomTag()))].join(',');
 }
